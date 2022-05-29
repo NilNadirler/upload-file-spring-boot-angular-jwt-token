@@ -1,0 +1,50 @@
+<!-- <div class="container-fluid"> 
+  <div class="row header-section">
+      <span>File Upload-Download</span>
+  </div> 
+  <div>
+      <h3> Upload File</h3>
+    <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+    <button (click)="onUpload()">Upload Image</button>
+  </div>
+  <div>
+      <h3>Uploaded Files</h3>
+      <ul *ngIf="!!fileResponse">
+          <div  *ngFor="let file of fileResponse">
+           <label> <li> {{file?.name}}</li></label>
+            <button (click)="downloadFile(file.id, file.name)"> Download</button>
+          </div>
+
+      </ul>
+  </div>
+</div> -->
+
+
+  <div class="row">
+    <div class="col-8">
+      <label class="btn btn-default p-0">
+        <input type="file" (change)="onFileSelected($event)" />
+      </label>
+    </div>
+    <div class="col-4">
+      <button class="btn btn-success btn-sm" (click)="onUpload()">
+        Upload
+      </button>
+    </div>
+  </div>
+
+<div class="row" class="card mt-3">
+    <div class="card-header">List of Files</div>
+    <ul class="list-group list-group-flush" *ngIf="!!fileResponse">
+      <div class = "image_record" *ngFor="let file of fileResponse" >
+        <label class="list-group-item"> {{file?.name}}</label>
+        <div class="image_buttons">
+            <button class="downlaod_button" (click)="downloadFile(file.id, file.name)" class="btn btn-success btn-sm offset-md-4"> Download</button>
+            <button (click)="deleteFile(file.id)" class="btn btn-primary btn-sm offset-md-4"> Delete</button>
+        </div>
+       
+      </div>     
+    </ul>
+</div>
+    
+ 

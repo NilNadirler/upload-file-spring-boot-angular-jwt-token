@@ -1,0 +1,26 @@
+.image_record{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    margin-top:0.5rem;
+    margin-bottom: 0.5rem;
+    min-width:20rem;
+
+}
+
+.image_buttons{
+
+
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    
+}
+
+.list-group-item{
+    min-width: 20rem;
+}
+
+.downlaod_button{
+    margin-right: 0.25rem;
+}
